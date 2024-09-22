@@ -29,3 +29,16 @@ console.log(c); // -> it will return 30 (scope error) thats why we dont generall
 console.log(d); // -> it will return 20 (scope error) thats why we dont assign values directly to variable
 
 
+//-------nested scope--------------
+
+function one(){
+  const username = "a"
+
+  function two() {
+    const web = "b"
+    console.log(username)
+  }
+  // console.log(web); //one cannot access web. consider ice cream example as told
+  two()
+}
+one()

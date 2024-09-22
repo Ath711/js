@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM file 3</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    const h1 = document.createElement('h1')
+    console.log(div);
+    console.log(h1);
+
+    div.className = 'main'
+    div.id = Math.ceil(Math.random()*10 + 1)
+    div.setAttribute('title','generatedTitle')
+    div.style.backgroundColor = 'green'
+    div.style.padding = '20px'
+    // div.innerText = 'DOM file 3 learning' this is not optimized as it returns reference and then adds value
+    const addText = document.createTextNode('Dom 3 learning')
+    div.appendChild(addText)
+    
+    // window.document.body.appendChild(div)
+
+    document.body.appendChild(div)
+</script>
+</html>
